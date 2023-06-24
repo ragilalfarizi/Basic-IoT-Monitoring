@@ -128,7 +128,7 @@ void loop(void){
     Serial.println(msg);
     client.publish("outTopic", msg);
 
-    client.publish("iot22231/H1A020090/LED", String(value).c_str());
+    client.publish("iot22231/H1A020080/LED", String(value).c_str());
 
     readHumidity = dht.readHumidity();
     readTemperature = dht.readTemperature();
@@ -139,19 +139,19 @@ void loop(void){
 
     Serial.print("Suhu :");
     Serial.println(readTemperature);
-    client.publish("iot22231/H1A020090/suhu", String(readTemperature).c_str());
+    client.publish("iot22231/H1A020080/suhu", String(readTemperature).c_str());
     
     Serial.print("Kelembapan :");
     Serial.println(readHumidity);
-    client.publish("iot22231/H1A020090/kelembaban", String(readHumidity).c_str());
+    client.publish("iot22231/H1A020080/kelembaban", String(readHumidity).c_str());
 
     Serial.print("Alamat IP :");
     Serial.println(IP);
-    client.publish("iot22231/H1A020090/ipaddress", String(IP).c_str());
+    client.publish("iot22231/H1A020080/ipaddress", String(IP).c_str());
 
     Serial.print("ChipID :");
     Serial.println(ID);
-    client.publish("iot22231/H1A020090/chipid", String(ID).c_str());
+    client.publish("iot22231/H1A020080/chipid", String(ID).c_str());
 
     Serial.println("");
   }
